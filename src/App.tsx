@@ -1,31 +1,31 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [mode, setMode] = useState('light');
+  useEffect(() => {
+    if (mode === 'light') {
+      localStorage.setItem('theme', 'light');
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
+    } else {
+      localStorage.setItem('theme', 'dark');
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+    }
+  }, [mode]);
 
+  const handleSwitchMode = () => {
+    setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
   return (
-    <>
-      <div>
-        <h1 className='text-4xl text-sky-600'>hellloooo</h1>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+    <div className='background'>
+      <h1 className='text-4xl text-sky-600'>hellloooo</h1>
       <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-    </>
+      <button className='bg-amber-400 p-1.5' onClick={handleSwitchMode}>
+        {mode}
+      </button>
+    </div>
   );
 }
 

@@ -1,26 +1,42 @@
-@import "tailwindcss";
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'tailwindcss';
+@theme {
+  --color-lagoon: oklch(0.72 0.11 221.19);
+  --color-coral: oklch(0.74 0.17 40.24);
+  --color-driftwood: oklch(0.79 0.06 74.59);
+  --color-tide: oklch(0.49 0.08 205.88);
+  --color-dusk: oklch(0.82 0.15 72.09);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.light {
+  --background: 245, 245, 245;
+
+  --border: 212, 212, 212;
+  --card: 255, 255, 255;
+
+  --copy-primary: 23, 23, 23;
+  --copy-secondary: 115, 115, 115;
+
+  --cta: 139, 92, 246;
+  --cta-active: 124, 58, 237;
+  --cta-text: 255, 255, 255;
+
+  background: rgba(var(--background));
 }
-a:hover {
-  color: #535bf2;
+
+.dark {
+  --background: 0, 0, 0;
+
+  --border: 38, 38, 38;
+  --card: 23, 23, 23;
+
+  --copy-primary: 250, 250, 250;
+  --copy-secondary: 115, 115, 115;
+
+  --cta: 99, 102, 241;
+  --cta-active: 79, 70, 229;
+  --cta-text: 255, 255, 255;
+
+  background: rgba(var(--background));
 }
 
 body {
@@ -29,41 +45,4 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
