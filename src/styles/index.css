@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import '../../public/Fonts/Vazirmatn/vazirmatn.css';
+
 @theme static {
   --color-background: rgba(255, 255, 255, 1);
   --color-primary: rgba(7, 113, 237, 1);
@@ -38,6 +40,10 @@
   --color-success-main: rgba(243, 253, 250, 1);
   --color-success-light: rgba(0, 186, 136, 1);
   --color-success-dark: rgba(0, 150, 109, 1);
+
+  /* font */
+  --font-*: initial;
+  --font-sans: 'vazirmatn', sans-serif;
 }
 @layer base {
   .dark {
@@ -80,13 +86,13 @@
     --color-success-light: rgba(0, 186, 136, 1);
     --color-success-dark: rgba(0, 120, 90, 1);
   }
-
 }
 
-body {
+/* body {
+  font-family: 'vazirmatn', sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */

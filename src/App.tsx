@@ -18,10 +18,10 @@ function App() {
     setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
   return (
-    <div
-      className='bg-secondary text-center '
-    >
+    <div className='bg-secondary text-center '>
       <h1 className='text-4xl text-sky-600'>hellloooo</h1>
+      <h1 className='text-4xl  text-sky-600'>سلام</h1>
+
       <p className='read-the-docs color-primary'>Click on the Vite and React logos to learn more</p>
       <button className='bg-amber-400 p-1.5' onClick={handleSwitchMode}>
         {mode}
