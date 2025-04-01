@@ -1,42 +1,86 @@
 @import 'tailwindcss';
-@theme {
-  --color-lagoon: oklch(0.72 0.11 221.19);
-  --color-coral: oklch(0.74 0.17 40.24);
-  --color-driftwood: oklch(0.79 0.06 74.59);
-  --color-tide: oklch(0.49 0.08 205.88);
-  --color-dusk: oklch(0.82 0.15 72.09);
+@theme static {
+  --color-background: rgba(255, 255, 255, 1);
+  --color-primary: rgba(7, 113, 237, 1);
+  --color-secondary: rgba(237, 131, 7, 1);
+
+  /* blue */
+  --color-blue-main: rgba(1, 114, 222, 1);
+  --color-blue-light: rgba(223, 239, 255, 1);
+  --color-blue-dark: rgba(96, 177, 254, 1);
+
+  /* orange */
+  --color-orange-main: rgba(222, 54, 1, 1);
+  --color-orange-light: rgba(255, 231, 223, 1);
+  --color-orange-dark: rgba(254, 134, 96, 1);
+
+  /* black */
+  --color-black-main: rgba(23, 31, 38, 1);
+  --color-black-dark: rgba(203, 203, 203, 1);
+  --color-black-light: rgba(7, 113, 237, 1);
+
+  /* white */
+  --color-white-main: rgba(255, 255, 255, 1);
+  --color-white-light: rgba(242, 242, 242, 1);
+  --color-white-dark: rgba(237, 237, 237, 1);
+
+  /* error */
+  --color-error-main: rgba(255, 242, 242, 1);
+  --color-error-light: rgba(237, 46, 46, 1);
+  --color-error-dark: rgba(195, 0, 0, 1);
+
+  /* warning */
+  --color-warning-main: rgba(255, 248, 225, 1);
+  --color-warning-light: rgba(244, 183, 64, 1);
+  --color-warning-dark: rgba(169, 121, 28, 1);
+
+  /* success */
+  --color-success-main: rgba(243, 253, 250, 1);
+  --color-success-light: rgba(0, 186, 136, 1);
+  --color-success-dark: rgba(0, 150, 109, 1);
 }
+@layer base {
+  .dark {
+    --color-background: rgba(23, 31, 38, 1);
+    --color-primary: rgba(96, 177, 254, 1);
+    --color-secondary: rgba(254, 134, 96, 1);
 
-.light {
-  --background: 245, 245, 245;
+    /* blue */
+    --color-blue-main: rgba(96, 177, 254, 1);
+    --color-blue-light: rgba(1, 114, 222, 1);
+    --color-blue-dark: rgba(0, 82, 160, 1);
 
-  --border: 212, 212, 212;
-  --card: 255, 255, 255;
+    /* orange */
+    --color-orange-main: rgba(254, 134, 96, 1);
+    --color-orange-light: rgba(222, 54, 1, 1);
+    --color-orange-dark: rgba(150, 30, 0, 1);
 
-  --copy-primary: 23, 23, 23;
-  --copy-secondary: 115, 115, 115;
+    /* black */
+    --color-black-main: rgba(255, 255, 255, 1);
+    --color-black-dark: rgba(203, 203, 203, 1);
+    --color-black-light: rgba(169, 169, 169, 1);
 
-  --cta: 139, 92, 246;
-  --cta-active: 124, 58, 237;
-  --cta-text: 255, 255, 255;
+    /* white */
+    --color-white-main: rgba(38, 45, 52, 1);
+    --color-white-light: rgba(45, 52, 60, 1);
+    --color-white-dark: rgba(60, 67, 75, 1);
 
-  background: rgba(var(--background));
-}
+    /* error */
+    --color-error-main: rgba(195, 0, 0, 1);
+    --color-error-light: rgba(237, 46, 46, 1);
+    --color-error-dark: rgba(120, 0, 0, 1);
 
-.dark {
-  --background: 0, 0, 0;
+    /* warning */
+    --color-warning-main: rgba(169, 121, 28, 1);
+    --color-warning-light: rgba(244, 183, 64, 1);
+    --color-warning-dark: rgba(100, 70, 20, 1);
 
-  --border: 38, 38, 38;
-  --card: 23, 23, 23;
+    /* success */
+    --color-success-main: rgba(0, 150, 109, 1);
+    --color-success-light: rgba(0, 186, 136, 1);
+    --color-success-dark: rgba(0, 120, 90, 1);
+  }
 
-  --copy-primary: 250, 250, 250;
-  --copy-secondary: 115, 115, 115;
-
-  --cta: 99, 102, 241;
-  --cta-active: 79, 70, 229;
-  --cta-text: 255, 255, 255;
-
-  background: rgba(var(--background));
 }
 
 body {

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -19,9 +18,11 @@ function App() {
     setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
   return (
-    <div className='background'>
+    <div
+      className='bg-secondary text-center '
+    >
       <h1 className='text-4xl text-sky-600'>hellloooo</h1>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+      <p className='read-the-docs color-primary'>Click on the Vite and React logos to learn more</p>
       <button className='bg-amber-400 p-1.5' onClick={handleSwitchMode}>
         {mode}
       </button>
