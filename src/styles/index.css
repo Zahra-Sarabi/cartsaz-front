@@ -5,6 +5,7 @@
   --color-background: rgba(255, 255, 255, 1);
   --color-primary: rgba(7, 113, 237, 1);
   --color-secondary: rgba(237, 131, 7, 1);
+  --color-text: rgba(0, 0, 0, 1);
 
   /* blue */
   --color-blue-main: rgba(1, 114, 222, 1);
@@ -46,10 +47,35 @@
   --font-sans: 'vazirmatn', sans-serif;
 }
 @layer base {
+  button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  @media (max-width: 700px) {
+    button {
+      padding: 0.5rem 1rem;
+    }
+  }
+  input {
+    width: 100%;
+    rounded: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-gray-300);
+  }
+  
+  body {
+    background: var(--color-background);
+    color: var(--color-text);
+  }
   .dark {
     --color-background: rgba(23, 31, 38, 1);
     --color-primary: rgba(96, 177, 254, 1);
     --color-secondary: rgba(254, 134, 96, 1);
+    --color-text: rgba(255, 255, 255, 1);
 
     /* blue */
     --color-blue-main: rgba(96, 177, 254, 1);
@@ -86,13 +112,9 @@
     --color-success-light: rgba(0, 186, 136, 1);
     --color-success-dark: rgba(0, 120, 90, 1);
   }
-}
 
-/* body {
-  font-family: 'vazirmatn', sans-serif;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
+  .btn-outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+}
